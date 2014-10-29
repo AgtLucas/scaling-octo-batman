@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AgtLucas/scaling-octo-batman/issues"
   },
-  "homepage": "https://github.com/AgtLucas/scaling-octo-batman"
+  "homepage": "https://github.com/AgtLucas/scaling-octo-batman",
+  "dependencies": {
+    "lodash": "^2.4.1"
+  }
 }
