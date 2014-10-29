@@ -1,6 +1,7 @@
 // Gulpfile!
 var gulp = require('gulp');
 var browserify = require('gulp-browserify');
+var deploy = require('gulp-gh-pages');
 var concat = require('gulp-concat');
 
 // Browserify task
@@ -17,8 +18,14 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist'));
 });
 
+// Watch task
 gulp.task('watch', function () {
   gulp.watch('src/**/*.*', ['default']);
+});
+
+gulp.task('deploy', function () {
+  return gulp.src('dist/**/*')
+    .pipe(deploy());
 });
 
 // Default
