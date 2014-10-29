@@ -1,0 +1,19 @@
+{
+  "name": "scaling-octo-batman",
+  "version": "1.0.0",
+  "description": "scaling-octo-batman ===================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgtLucas/scaling-octo-batman.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AgtLucas/scaling-octo-batman/issues"
+  },
+  "homepage": "https://github.com/AgtLucas/scaling-octo-batman"
+}
