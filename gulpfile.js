@@ -3,12 +3,14 @@ var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var deploy = require('gulp-gh-pages');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 // Browserify task
 gulp.task('browserify', function () {
   gulp.src('src/js/main.js')
     .pipe(browserify({transform:'reactify'}))
     .pipe(concat('main.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
 
