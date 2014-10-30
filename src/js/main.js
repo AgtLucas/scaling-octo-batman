@@ -1,5 +1,3 @@
-var app = function () {
-  console.log('Go!');
-};
+var alerter = require('alerter');
 
-module.exports = app;
+alerter('Yo!');
