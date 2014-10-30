@@ -44,4 +44,4 @@ gulp.task('deploy', function () {
 });
 
 // Default
-gulp.task('default', ['browserify', 'copy']);
+gulp.task('default', ['browserify', 'sass', 'copy']);
