@@ -35,7 +35,7 @@ gulp.task('copy', function () {
 
 // Watch task
 gulp.task('watch', function () {
-  gulp.watch('src/**/*.*', ['lr', 'default']);
+  gulp.watch('src/**/*.*', ['default']);
 });
 
 gulp.task('deploy', function () {
