@@ -7,6 +7,8 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 // Browserify task
 gulp.task('browserify', function () {
@@ -27,6 +29,16 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('dist/css'));
 });
 
+// Imagemin
+gulp.task('imagemin', function () {
+  gulp.src('src/img/*')
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('dist/img'));
+});
+
 // Copy task
 gulp.task('copy', function () {
   gulp.src('src/index.html')
@@ -44,4 +56,4 @@ gulp.task('deploy', function () {
 });
 
 // Default
-gulp.task('default', ['browserify', 'sass', 'copy']);
+gulp.task('default', ['browserify', 'sass', 'imagemin', 'copy']);
