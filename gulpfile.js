@@ -50,6 +50,7 @@ gulp.task('watch', function () {
   gulp.watch('src/**/*.*', ['default']);
 });
 
+// Deploy task
 gulp.task('deploy', function () {
   return gulp.src('dist/**/*')
     .pipe(deploy());
